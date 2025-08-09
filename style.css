@@ -1,0 +1,407 @@
+body{
+    
+     font-family: "Montserrat", sans-serif;
+     margin:0;
+     padding:0;
+     background-color: black;
+     color:white;
+     overflow:hidden;
+}
+
+/* MAIN PART */
+.main{
+    /* main content part of all the page */
+    display:flex;
+    height:100vh;
+    padding:0.7rem;
+    padding-top:10px;;
+}
+
+
+/*MAIN-CONTENT PART=1*/
+.sidebar{
+    /* sidebar */
+    /* flex:1 means jitna bhi bacha place hai give it to me*/
+    background-color:black;
+    width:340px;
+    border-radius:1rem; /*16px*/
+    margin-right:0.5rem;
+   
+}
+
+/*MAIN-CONTENT PART 2*/
+.main-content{
+    background-color: #121212;
+    /* flex:1 means jitna bhi bacha place hai give it to me*/
+    flex:1;
+    border-radius:1rem;
+    overflow:auto;
+    padding:0 1.5rem 0 1.5rem;
+
+}
+
+/*MAIN-CONTENT PART 3*/
+.music-player{
+    background-color: black;
+    position:fixed; /*the place is fixed */
+    bottom:0;/* bottom pe fix size */
+    width:100%;
+    height:72px;
+}
+
+
+
+/*NAVIGATION PART 1*/
+a{
+    text-decoration: none;/*to remove underline part from text */
+    color:#fff;
+}
+.nav{
+    background-color: #121212;
+    border-radius:1rem;
+    display:flex; /*same line*/
+    flex-direction:column;/*to style in column way */
+    justify-content: center;/*to center part */
+    height:100px;
+    padding: 0.5rem 0.75rem;
+
+}
+.nav-option{
+    opacity:0.7;
+    line-height:2.5rem ;/*40px */
+    padding:0.5rem;
+}
+
+.nav-option:hover{
+  opacity:1;
+}
+
+.nav-option i{
+    font-size:1.25rem;
+
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left:1rem; 
+}
+
+
+/*NAVIGATION PART 2 LIBRARY*/
+
+ /*Navigation part 2 A */
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+     height: 100%;
+     margin-top:0.75rem;
+     padding:0.5rem 0.75rem;
+}
+.options{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem; 
+   
+}
+
+.icons{
+    font-size:1.25rem;
+    display:flex;
+}
+
+.icons i{
+    opacity:0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity:1;
+    
+}
+
+/*Navigation part 2 B*/
+.box{
+    background-color:#232323 ;
+    height :8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1{
+    font-size:1rem;
+    font-weight: 500;
+    
+}
+
+.box-p2{
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border:none;
+    border-radius:100px;
+    padding : 0.25rem 1rem;
+    font-weight: 700;
+    margin-top:0.5rem;
+    height: 2rem;
+    width:fit-content;/*content jo hai woh fit hoga*/
+}
+.extra{
+display:flex;
+flex-wrap:wrap ;
+padding:0.5rem;
+padding: 0.5rem 0.75rem;
+}
+
+/*MAIN-CONTENT PART =2 A*/
+
+.sticky-nav{
+    position: sticky;  /*sticked there*/
+    top:0;
+    background-color: #121212;
+    justify-content:space-between ;/*space between*/
+    display:flex;
+    align-items: center;
+    padding:1rem 0 1rem 0 ;
+    z-index:10;
+}
+
+.sticky-nav-icons img{
+    margin-left:0.75rem;
+}
+
+.sticky-nav-options{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:2rem;
+}
+
+/*css for button of sticky part*/
+.nav-item{
+     margin-left:1rem;   
+}
+
+.dark{
+    color:white;
+    background-color: black;
+}
+
+@media(max-width:1000px){
+    .hide{
+        display:none;
+    }
+}
+
+
+/*MAIN-CONTENT PART =2 B*/
+.card{
+    background-color: #232323;
+    width:160px;
+    border-radius: 0.5rem;
+    padding:1rem;
+    margin-left:1.5rem;
+    margin-top:1.5rem;
+}
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.img{
+    width:100%;
+    border-radius: 0.5rem;
+}
+
+.title{
+    font-weight:600 ;
+}
+.info{
+    font-size :0.85rem;
+    opacity: 0.8;
+}
+
+
+/*MAIN-CONTENT PART=3--MUSIC PLAYER SETTING  */
+
+
+/*--MAIN-CONTENT PART=3--MUSIC PLAYER SETTING */
+/* Music Player Layout */
+.music-player {
+    position: fixed;      /* Stick to bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;          /* Full screen width */
+    background: #000;     /* Black background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    z-index: 1000;        /* Always on top */
+}
+
+/* Album Info Section */
+.album {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 25%;
+}
+
+.album-art {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.song-info h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.song-info p {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Player Controls */
+
+.player {
+    
+    width: 65%; /* More width for player area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.player-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+    
+}
+
+.pci {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.play-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+.current-time, .total-time {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -4px;
+    width: 100%; /* Stretch full width of player */
+}
+
+.progress {
+    width: 75%; /* Wider progress bar */
+    accent-color: white;
+}
+
+/* Extra Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 25%;
+    justify-content: flex-end;
+}
+
+
+
+.controls img {
+    width: 26px;  /* Bigger than before */
+    height: 26px;
+    cursor: pointer;
+}
+
+.volume {
+    width: 100px;  /* Keep slider proportionate */
+    accent-color: white;
+}
+
+
+
+
+/* Footer container */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #121212;
+    color: white;
+    padding: 50px 60px;
+    flex-wrap: nowrap; /* keep everything in one line */
+    gap: 40px;
+}
+
+/* Footer columns */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer icons inline */
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Divider line */
+.line-2 {
+    width: 100%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
