@@ -18,4 +18,4 @@ This project replicates the look and feel of Spotify’s web player, focusing pu
 - **HTML5** – Structure and content
 - **CSS3** – Styling and layout
 
----
+--
